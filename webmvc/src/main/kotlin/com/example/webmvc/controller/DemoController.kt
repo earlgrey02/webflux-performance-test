@@ -13,7 +13,7 @@ class DemoController(
 ) {
     @GetMapping("/cpu")
     fun `CPU Bound`() {
-        repeat(100_000_000) { sqrt(it.toDouble()) }
+        repeat(10_000_000) { sqrt(it.toDouble()) }
     }
 
     @GetMapping("/io")

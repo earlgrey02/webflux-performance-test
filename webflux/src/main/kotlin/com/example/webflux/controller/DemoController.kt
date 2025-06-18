@@ -15,8 +15,9 @@ class DemoController(
     private val reactiveDemoRepository: ReactiveDemoRepository,
 ) {
     @GetMapping("/cpu")
-    fun `CPU Bound`() =
-        repeat(100_000_000) { sqrt(it.toDouble()) }
+    fun `CPU Bound`() {
+        repeat(10_000_000) { sqrt(it.toDouble()) }
+    }
 
     @GetMapping("/io/blocking")
     fun `Blocking IO Bound`() {
